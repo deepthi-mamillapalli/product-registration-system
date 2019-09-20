@@ -1,0 +1,32 @@
+{ 
+    "_id" : ObjectId("5c4c7dcd9b2c5905dd8099c4"), 
+    "product_dob" : "Sat Jan 26 2019 21:03:13 GMT+0530 (India Standard Time)", 
+    "product_title" : "asdf", 
+    "product_type_id" : "1", 
+    "product_model_no" : "fesg", 
+    "product_cost" : "dfg", 
+    "product_height" : "sdfg", 
+    "product_width" : "sdgdsf", 
+    "product_weight" : "sdg", 
+    "product_company_id" : "5a356445b620d810bc9c5f74", 
+    "product_description" : "sdfg", 
+    "product_image" : "File_15485168132.png", 
+    "modified" : ISODate("2019-01-26T15:33:33.283+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c4cab13d1cbbe05649ea30e"), 
+    "product_dob" : "Sun Jan 27 2019 00:16:17 GMT+0530 (India Standard Time)", 
+    "product_model_no" : "2", 
+    "product_title" : "1", 
+    "product_type_id" : "5c4c7f718865200580690a80", 
+    "product_cost" : "3", 
+    "product_height" : "4", 
+    "product_width" : "5", 
+    "product_weight" : "6", 
+    "product_company_id" : "5c4ca873bc548804cc203b1c", 
+    "product_description" : "7", 
+    "product_image" : "File_15485284032.png", 
+    "modified" : ISODate("2019-01-26T18:46:43.278+0000"), 
+    "__v" : NumberInt(0)
+}

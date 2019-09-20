@@ -1,0 +1,36 @@
+<div id="banner-area">
+	<div class="container">
+			<div class="row">
+					<!-- Subpage title start -->
+					<div class="banner-title-content col-sm-12">
+							<div class="text-center">
+									<h2>Login to your Account</h2>
+							</div>
+					</div><!-- Subpage title end -->
+			</div>
+	</div>
+</div><!-- Banner area end -->     	
+
+<section id="content">
+<div class="container">
+<div class="skill-wrap clearfix">
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+  <form novalidate name="AddNewForm" id="add-new-form" method="post" ng-init="logout()">
+	<div class="form-group">
+	  <label for="rolename">Email or Usermame</label>
+	  <input class="form-control" type="text" ng-model="user.user_username" required />
+	</div>
+	<div class="form-group">
+	  <label for="first_name">Password</label>
+	  <input class="form-control" type="password" ng-model="user.user_password" required />
+	</div>
+	<button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(role)" id="add-new-btn" ng-click="checkLogin(user)">Login</button>
+	<a href="#/" class="btn">Cancel</a>
+  </form>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
+</section>

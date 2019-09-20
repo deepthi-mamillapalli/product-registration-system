@@ -1,0 +1,84 @@
+<script>
+$( function() {
+$( "#product_dob" ).datepicker();
+} );
+</script>
+<div id="banner-area" ng-init="createProduct()">
+    <div class="container">
+        <div class="row">
+            <!-- Subpage title start -->
+            <div class="banner-title-content col-sm-12">
+                <div class="text-center">
+                    <h2>Product Management</h2>
+                </div>
+            </div><!-- Subpage title end -->
+        </div>
+    </div>
+</div><!-- Banner area end -->
+
+<section id="content">
+    <div class="container">
+        <div class="skill-wrap clearfix">
+            <h3 ng-if="product._id">Edit Details of {{product.product_cost}}</h3>
+            <h3 ng-if="!product._id">Add New Product</h3>
+            <div class="row">
+                <form novalidate name="AddNewForm" id="add-new-form" method="post" enctype='multipart/form-data'>
+                    <div class="form-group col-sm-6">
+                        <label for="first_name">Product Title</label>
+                        <input class="form-control" type="text" ng-model="product.product_title" required/>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Product Type</label>
+                        <select class="form-control" ng-model="product.product_type_id" ng-options="type.type_title for type in types track by type._id">
+                            <option value="">Select Product Type</option>
+                        </select>
+                    </div>
+					<div style="clear:both"></div>
+                    <div class="form-group col-sm-6" ng-if="!product._id">
+                        <label for="first_name">Model No.</label>
+                        <input class="form-control" type="text" ng-model="product.product_model_no" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="productname">Porudct Cost</label>
+                        <input class="form-control" type="text" ng-model="product.product_cost" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="first_name">Height</label>
+                        <input class="form-control" type="text" ng-model="product.product_height" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Width</label>
+                        <input class="form-control" type="text" ng-model="product.product_width" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="address">Weight</label>
+                        <input class="form-control" type="text" ng-model="product.product_weight" />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Company</label>
+                        <select class="form-control" ng-model="product.product_company_id" ng-options="company.company_name for company in companies track by company._id">
+                            <option value="">Select Company</option>
+                        </select>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="form-group col-sm-6">
+                        <label for="address">Image</label>
+                        <input class="form-control" type="file" file-model="product_image" name="product.product_image"/>                        
+                        <div ng-if="product.product_image">
+                            <img src="api/public/uploads/{{product.product_image}}" style="height:50px; width:40px">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="address">Description</label>
+                        <input class="form-control" type="text" ng-model="product.product_description" />
+                    </div>
+                    <div style="clear:both; float:right; margin-right:25px" ng-if="user_level_id == '1'">
+                        <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(product)" id="add-new-btn" ng-click="saveProduct(product)">Save!</button>
+                        <a href="product" class="btn btn-primary" style="background-color:#FF0000">Cancel</a>
+                    </div>
+                    <input class="form-control" type="hidden" ng-model="product._id" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

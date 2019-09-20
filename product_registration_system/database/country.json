@@ -1,0 +1,15 @@
+{ 
+    "_id" : ObjectId("59e63f2e599ea88439a07b51"), 
+    "country_name" : "India", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59e63f33599ea88439a07b52"), 
+    "country_name" : "USA", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59e63f3e599ea88439a07b53"), 
+    "country_name" : "Australia", 
+    "__v" : NumberInt(0)
+}

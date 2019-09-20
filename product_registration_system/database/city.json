@@ -1,0 +1,10 @@
+{ 
+    "_id" : ObjectId("5a356445b620d810bc9c5f74"), 
+    "city_name" : "mumbai", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a3564eab620d810bc9c5f75"), 
+    "city_name" : "Delhi", 
+    "__v" : NumberInt(0)
+}

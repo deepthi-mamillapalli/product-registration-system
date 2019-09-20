@@ -1,0 +1,107 @@
+<script>
+$( function() {
+$( "#user_dob" ).datepicker();
+} );
+</script>
+<div id="banner-area" ng-init="createUser()">
+    <div class="container">
+        <div class="row">
+            <!-- Subpage title start -->
+            <div class="banner-title-content col-sm-12">
+                <div class="text-center">
+                    <h2>User Management</h2>
+                </div>
+            </div><!-- Subpage title end -->
+        </div>
+    </div>
+</div><!-- Banner area end -->
+
+<section id="content">
+    <div class="container">
+        <div class="skill-wrap clearfix">
+            <h3 ng-if="user._id">Edit Details of {{user.user_name}}</h3>
+            <h3 ng-if="!user._id">Add New Employee</h3>
+            <div class="row">
+                <form novalidate name="AddNewForm" id="add-new-form" method="post" enctype='multipart/form-data'>
+                    <div class="form-group col-sm-6">
+                        <label for="first_name">Username</label>
+                        <input class="form-control" type="text" ng-model="user.user_username" required ng-disabled="user_level_id != '1'"/>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">User Role</label>
+                        <select ng-disabled="user_level_id != '1'" class="form-control" ng-model="user.user_level_id" ng-options="role.role_title for role in roles track by role.role_id">
+                            <option value="">Select User Role</option>
+                        </select>
+                    </div>
+					
+                    <div class="form-group col-sm-6" ng-if="!user._id">
+                        <label for="first_name">Password</label>
+                        <input class="form-control" type="password" ng-model="user.user_password" required />
+                    </div>
+                    <div class="form-group col-sm-6" ng-if="!user._id">
+                        <label for="first_name">Confirm Password</label>
+                        <input class="form-control" type="password"/>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="username">Name</label>
+                        <input class="form-control" type="text" ng-model="user.user_name" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="first_name">Email</label>
+                        <input class="form-control" type="text" ng-model="user.user_email" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Mobile</label>
+                        <input class="form-control" type="text" ng-model="user.user_mobile" required />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Gender</label>
+                        <select class="form-control" ng-model="user.user_gender">
+                        <option value="">Select Gender</option>
+                        <option value="Male" {{user.user_gender === "Male" ? "Selected" : ""}}>Male</option>
+                        <option value="Female" {{user.user_gender === "Female" ? "Selected" : ""}}>Female</option>
+                    </select>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Date of Birth</label>
+						<input class="form-control" type="text" id="user_dob" ng-model="user.user_dob" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="address">Address</label>
+                        <input class="form-control" type="text" ng-model="user.user_address" />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">City</label>
+                        <select class="form-control" ng-model="user.user_city" ng-options="city.city_name for city in cities track by city._id">
+                            <option value="">Select City</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">State</label>
+                        <select class="form-control" ng-model="user.user_state" ng-options="state.state_name for state in states track by state._id">
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="last_name">Country</label>
+                        <select class="form-control" ng-model="user.user_country" ng-options="country.country_name for country in countries track by country._id">
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="address">Image</label>
+                        <input class="form-control" type="file" file-model="user_image" name="user.user_image"/>                        
+                        <div ng-if="user.user_image">
+                            <img src="api/public/uploads/{{user.user_image}}" style="height:50px; width:40px">
+                        </div>
+                    </div>
+                    <div style="clear:both; float:right; margin-right:25px">
+                        <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="saveUser(user)">Save!</button>
+                        <a href="user" class="btn btn-primary" style="background-color:#FF0000">Cancel</a>
+                    </div>
+                    <input class="form-control" type="hidden" ng-model="user._id" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

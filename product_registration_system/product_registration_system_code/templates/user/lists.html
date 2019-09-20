@@ -1,0 +1,52 @@
+<div id="banner-area">
+	<div class="container">
+		<div class="row">
+			<!-- Subpage title start -->
+			<div class="banner-title-content col-sm-12">
+				<div class="text-center">
+					<h2>User Reports</h2>
+				  </div>
+			  </div><!-- Subpage title end -->
+		</div>
+	</div>
+</div><!-- Banner area end -->
+	
+<section id="content">
+	<div class="container">
+		<div class="skill-wrap clearfix">
+			
+			<div style="text-align:right; margin-bottom:10px;">
+				<a class="btn btn-primary" href="user/add/">Add New User</a>
+			</div>
+			<div class="col-lg-12 col-sm-12 col-xs-12 alert alert-success ng-hide" ng-show="isDisplay"><strong>{{showAlert}}</strong></div>
+			<table class="table table-condensed">
+				<thead>
+					<tr>
+						<th>Image</th>
+						<th>Name</th>
+						<th>Gender</th>
+						<th>Email</th>
+						<th>Date of Birth</th>
+						<th>Options</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="user in users">
+						<td><img src="api/public/uploads/{{user.user_image}}" style="height:60px; width:80px"></td>
+						<td>{{user.user_name}}</td>
+						<td>{{user.user_gender}}</td>
+						<td>{{user.user_email}}</td>
+						<td>{{user.user_dob}}</td>
+						<td>
+							<a href="user/edit/{{user._id}}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i></a>
+							<a ng-click="delete(user._id)" class="btn btn-default btn-sm" style="background-color:#FF0000; color:#FFFFFF"><span class="glyphicon glyphicon-trash"></span></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--section-->
+	</div>
+	<!--/.container-->
+</section>
+<!--/about-us-->

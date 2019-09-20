@@ -1,0 +1,12 @@
+{ 
+    "_id" : ObjectId("5c4ca873bc548804cc203b1c"), 
+    "company_name" : "Adidas"
+}
+{ 
+    "_id" : ObjectId("5c4ca87fbc548804cc203b1d"), 
+    "company_name" : "Reebok"
+}
+{ 
+    "_id" : ObjectId("5c4ca88abc548804cc203b1e"), 
+    "company_name" : "Nike"
+}

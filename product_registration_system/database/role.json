@@ -1,0 +1,14 @@
+{ 
+    "_id" : ObjectId("59e641fe6e375ef63d2c084b"), 
+    "role_id" : "1", 
+    "role_title" : "Admin", 
+    "role_description" : "Admin Level Role and Permission", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59e642036e375ef63d2c084c"), 
+    "role_id" : "1", 
+    "role_title" : "User", 
+    "role_description" : "Users Level Role and Permissions", 
+    "__v" : NumberInt(0)
+}

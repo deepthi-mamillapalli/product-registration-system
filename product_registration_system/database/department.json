@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("5a4d13abd63cd01cf349266b"), 
+    "department_name" : "IT Department", 
+    "department_desc" : "IT Department", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a4d1470d63cd01cf349266d"), 
+    "department_name" : "HR Department", 
+    "department_desc" : "HR Department", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a4d1486d63cd01cf349266e"), 
+    "department_name" : "Finance Department", 
+    "department_desc" : "Finance Department", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a4d1494d63cd01cf349266f"), 
+    "department_name" : "Admin Department", 
+    "department_desc" : "Admin Department", 
+    "__v" : NumberInt(0)
+}

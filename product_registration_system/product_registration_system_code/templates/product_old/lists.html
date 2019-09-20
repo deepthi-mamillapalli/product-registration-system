@@ -1,0 +1,42 @@
+	<div id="banner-area">
+		<div class="container">
+			<div class="row">
+				<!-- Subpage title start -->
+				<div class="banner-title-content col-sm-12">
+		        	<div class="text-center">
+						<h2>Product Listing</h2>
+		          	</div>
+		      	</div><!-- Subpage title end -->
+			</div>
+		</div>
+	</div><!-- Banner area end -->
+	
+<section id="about-us">
+	<div class="container">			
+		<div class="skill-wrap clearfix">
+			<div style="text-align:right; margin-bottom:10px;">
+				<a class="btn btn-primary" href="product/registration/">Add New Product</a>
+			</div>
+			{{message}}
+			<table class="table table-condensed">
+			  <thead>
+				<tr>
+				  <th style="width:25%">Name</th>
+				  <th style="width:60%">Description</th>
+				  <th style="width:15%">Options</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr ng-repeat="product in products">
+				  <td>{{product.product_cost}}</td>
+				  <td>{{product.product_desc}}</td>
+					<td>
+						<a href="/product/edit/{{product._id}}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i></a>
+						<a ng-click="delete(product._id)" class="btn btn-default btn-sm" style="background-color:#FF0000; color:#FFFFFF"><span class="glyphicon glyphicon-trash"></span></a>
+					</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div><!--section-->
+	</div><!--/.container-->
+</section><!--/about-us-->

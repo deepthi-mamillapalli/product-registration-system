@@ -1,0 +1,23 @@
+{
+  "name": "express-api-rest",
+  "version": "1.0.0",
+  "description": "Simple Example Api Rest with Express JS Framework and mongodb",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": "Tony133",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~3.1.0",
+    "express": "~4.16.2",
+    "mkdirp": "^0.5.1",
+    "mongoose": "^4.13.7",
+    "morgan": "~1.9.0",
+    "multer": "^1.3.0",
+    "pug": "2.0.0-rc.4",
+    "serve-favicon": "~2.4.5"
+  }
+}

@@ -1,0 +1,10 @@
+{ 
+    "_id" : ObjectId("59e63ce625138ad737c24bd4"), 
+    "state_name" : "Bihar", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59e63cec25138ad737c24bd5"), 
+    "state_name" : "MP", 
+    "__v" : NumberInt(0)
+}

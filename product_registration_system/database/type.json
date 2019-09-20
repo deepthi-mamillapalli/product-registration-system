@@ -1,0 +1,5 @@
+{ 
+    "_id" : ObjectId("5c4c7f718865200580690a80"), 
+    "type_title" : "Clothing", 
+    "type_description" : "Clothings Items"
+}

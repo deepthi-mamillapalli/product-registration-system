@@ -1,0 +1,120 @@
+	<div id="banner-area">
+	<div id="banner-area">
+		<div class="container">
+			<div class="row">
+				<!-- Subpage title start -->
+				<div class="banner-title-content col-sm-12">
+		        	<div class="text-center">
+			        	<h2>Product Registration</h2>
+			        	<ul class="breadcrumb">
+				            <li><i class="icon icon-home2"></i> Product</li>
+				            <li>Registration</li>
+			          	</ul>
+		          	</div>
+		      	</div><!-- Subpage title end -->
+			</div>
+		</div>
+	</div><!-- Banner area end -->
+
+	<!-- Main container start -->
+	<section id="main-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-sm-8 col-xs-12">
+					<div class="gap-20"></div>
+					<h3>Registration Type</h3>
+					<p>To initiate a product registration application select the required product type then left mouse click on the “Save and Continue” button</p>
+					<form novalidate name="AddNewForm" id="add-new-form" method="post">
+            <div class="form-group">
+              <label for="projectname">Country where applicant is applying for registration</label>
+              <select class="form-control" ng-model="leave.leave_ls_id" ng-options="leavestatus.ls_name for leavestatus in leavestatus track by leavestatus._id">
+                <option value="">Leave Status</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="projectname">Select the type of product you wish to register: </label>
+              <select class="form-control" ng-model="leave.leave_ls_id" ng-options="leavestatus.ls_name for leavestatus in leavestatus track by leavestatus._id">
+                <option value="">Leave Status</option>
+              </select>
+						</div>
+						<div class="form-group">
+              <label for="projectname">Energy Performance Standard: </label>
+              <select class="form-control" ng-model="leave.leave_ls_id" ng-options="leavestatus.ls_name for leavestatus in leavestatus track by leavestatus._id">
+                <option value="">Leave Status</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(product)" id="add-new-btn" ng-click="saveProduct(product)">Save!</button>
+            <a href="product" class="btn btn-primary" style="background-color:#FF0000">Cancel</a>
+            <input class="form-control" type="hidden" ng-model="product._id" />
+          </form>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+
+					<div class="sidebar sidebar-right">
+						<div class="widget">
+							<h3 class="widget-title">Product Registration</h3>
+							<div class="panel-group" id="accordion">
+				              	<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/registration">Registration Type</a> 
+						                </h4>
+					                </div>
+												</div><!--/ Panel 1 end-->
+												<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/administrative">Administrative Details</a> 
+						                </h4>
+					                </div>
+												</div><!--/ Panel 1 end-->
+												<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/details">Product Details</a> 
+						                </h4>
+					                </div>
+												</div><!--/ Panel 1 end-->
+												<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/test">Test Results</a> 
+						                </h4>
+					                </div>
+												</div><!--/ Panel 1 end-->
+												<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/labeling">Labeling & Performance</a> 
+						                </h4>
+					                </div>
+												</div><!--/ Panel 1 end-->
+												<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/file">File Uploads</a> 
+						                </h4>
+					                </div>
+												</div><!--/ Panel 1 end-->
+												<div class="panel panel-default">
+					                <div class="panel-heading">
+						                <h4 class="panel-title"> 
+						                	<a href="product/declaration">Declaration and Submit</a> 
+						                </h4>
+					                </div>
+				              	</div><!--/ Panel 1 end-->
+				            </div><!--/ Panel end -->
+
+						</div><!-- Widget end -->
+
+
+					</div><!-- Sidebar end -->
+				</div><!-- Col end -->
+
+					
+
+
+			</div><!-- Row end -->
+		</div><!-- Container end -->
+	</section><!-- Main container end -->
